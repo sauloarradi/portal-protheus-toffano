@@ -111,6 +111,7 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 30px;
+            align-items: start;
         }
 
         .protheus-section {
@@ -120,6 +121,9 @@
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
             backdrop-filter: blur(15px);
             border: 1px solid rgba(255, 255, 255, 0.2);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
         }
 
         .other-section {
@@ -129,9 +133,9 @@
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
             backdrop-filter: blur(15px);
             border: 1px solid rgba(255, 255, 255, 0.2);
+            height: 100%;
             display: flex;
             flex-direction: column;
-            height: fit-content;
         }
 
         .current-time {
@@ -169,6 +173,7 @@
             grid-template-columns: 1fr 1fr;
             gap: 30px;
             margin-bottom: 15px;
+            flex: 1;
         }
 
         .environment-group {
@@ -328,11 +333,18 @@
 
         .other-btn:hover {
             transform: translateY(-4px);
-            box-shadow: 0 10px 30px rgba(255, 69, 0, 0.4);
+            box-shadow: 0 12px 35px rgba(255, 69, 0, 0.4);
         }
 
         .other-btn i {
-            font-size: 1.8rem;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+        }
+
+        .other-btn span {
+            font-size: 1rem;
+            text-align: center;
+            font-weight: 600;
         }
 
         .system-info {
@@ -551,6 +563,31 @@
                         <i class="fab fa-whatsapp"></i>
                         <span>Whatsapp</span>
                     </a>
+                </div>
+                
+                <div style="margin-top: 25px; padding: 20px; background: rgba(255, 69, 0, 0.1); border-radius: 15px; border: 1px solid rgba(255, 69, 0, 0.2); visibility: hidden;">
+                    <h3 style="color: #FF4500; font-size: 1.2rem; margin-bottom: 10px; display: flex; align-items: center;">
+                        <i class="fas fa-info-circle" style="margin-right: 8px;"></i>
+                        Informações Rápidas
+                    </h3>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; font-size: 0.9rem; color: #666;">
+                        <div style="display: flex; align-items: center;">
+                            <i class="fas fa-clock" style="color: #FF4500; margin-right: 8px;"></i>
+                            <span>Horário: 08:00 - 18:00</span>
+                        </div>
+                        <div style="display: flex; align-items: center;">
+                            <i class="fas fa-phone" style="color: #FF4500; margin-right: 8px;"></i>
+                            <span>Suporte: 4002-8922</span>
+                        </div>
+                        <div style="display: flex; align-items: center;">
+                            <i class="fas fa-envelope" style="color: #FF4500; margin-right: 8px;"></i>
+                            <span>Email: suporte@toffano.com</span>
+                        </div>
+                        <div style="display: flex; align-items: center;">
+                            <i class="fas fa-server" style="color: #FF4500; margin-right: 8px;"></i>
+                            <span>Status: Online</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
