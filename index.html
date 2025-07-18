@@ -25,7 +25,7 @@
         .header {
             background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(15px);
-            padding: 25px 0;
+            padding: 15px 0;
             box-shadow: 0 4px 25px rgba(255, 69, 0, 0.25);
             position: sticky;
             top: 0;
@@ -36,47 +36,78 @@
         .header-content {
             max-width: 1400px;
             margin: 0 auto;
-            display: flex;
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
             align-items: center;
-            justify-content: center;
             padding: 0 40px;
+            gap: 20px;
         }
 
         .logo {
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
         }
 
         .logo img {
-            height: 80px;
+            height: 50px;
             width: auto;
+        }
+
+        .header-title {
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 300;
+            color: #2d3748;
+            margin: 0;
+        }
+
+        .header-clock {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .compact-clock {
+            background: rgba(255, 69, 0, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 10px 20px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 69, 0, 0.3);
+            text-align: center;
+        }
+
+        .compact-time {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #FF4500;
+            font-family: 'Courier New', monospace;
+            letter-spacing: 1px;
+        }
+
+        .compact-date {
+            font-size: 0.8rem;
+            color: #666;
+            font-weight: 500;
+            margin-top: 2px;
         }
 
         .container {
             flex: 1;
             max-width: 1400px;
             margin: 0 auto;
-            padding: 60px 40px;
+            padding: 20px 40px;
         }
 
         .welcome-section {
             text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .welcome-title {
-            font-size: 3.5rem;
-            color: white;
-            margin-bottom: 20px;
-            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
-            font-weight: 300;
+            margin-bottom: 25px;
         }
 
         .welcome-subtitle {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             color: rgba(255, 255, 255, 0.95);
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             font-weight: 300;
         }
 
@@ -132,17 +163,17 @@
         .section {
             background: rgba(255, 255, 255, 0.98);
             border-radius: 25px;
-            padding: 50px;
-            margin-bottom: 40px;
+            padding: 30px;
+            margin-bottom: 25px;
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
             backdrop-filter: blur(15px);
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .section-title {
-            font-size: 2.2rem;
+            font-size: 1.8rem;
             color: #2d3748;
-            margin-bottom: 40px;
+            margin-bottom: 25px;
             text-align: center;
             display: flex;
             align-items: center;
@@ -159,14 +190,14 @@
         .environments-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            margin-bottom: 20px;
+            gap: 30px;
+            margin-bottom: 15px;
         }
 
         .environment-group {
             background: rgba(248, 250, 252, 0.8);
             border-radius: 20px;
-            padding: 40px;
+            padding: 25px;
             transition: all 0.3s ease;
             border: 2px solid transparent;
         }
@@ -182,10 +213,10 @@
         }
 
         .environment-title {
-            font-size: 1.8rem;
-            margin-bottom: 30px;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
             text-align: center;
-            padding: 20px;
+            padding: 15px;
             border-radius: 15px;
             font-weight: 500;
             color: white;
@@ -210,24 +241,24 @@
         .rpo-buttons {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 15px;
         }
 
         .access-btn {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 12px;
-            padding: 18px 25px;
+            gap: 15px;
+            padding: 25px 30px;
             border: none;
-            border-radius: 12px;
-            font-size: 1.1rem;
+            border-radius: 15px;
+            font-size: 1.3rem;
             font-weight: 600;
             text-decoration: none;
             color: white;
             transition: all 0.3s ease;
             cursor: pointer;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
             position: relative;
             overflow: hidden;
             text-transform: uppercase;
@@ -277,7 +308,7 @@
         .other-section {
             background: rgba(255, 255, 255, 0.98);
             border-radius: 25px;
-            padding: 50px;
+            padding: 30px;
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
             backdrop-filter: blur(15px);
             border: 1px solid rgba(255, 255, 255, 0.2);
@@ -286,8 +317,8 @@
         .other-buttons-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 25px;
-            margin-top: 20px;
+            gap: 20px;
+            margin-top: 15px;
         }
 
         .other-btn {
@@ -295,11 +326,11 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 12px;
-            padding: 30px 20px;
+            gap: 10px;
+            padding: 20px 15px;
             border: none;
             border-radius: 20px;
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: 600;
             text-decoration: none;
             color: white;
@@ -307,7 +338,7 @@
             cursor: pointer;
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
             background: linear-gradient(135deg, #FF4500 0%, #FF6B00 100%);
-            min-height: 140px;
+            min-height: 100px;
         }
 
         .other-btn:hover {
@@ -316,15 +347,15 @@
         }
 
         .other-btn i {
-            font-size: 2rem;
+            font-size: 1.8rem;
         }
 
         .system-info {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 30px;
-            padding: 20px;
+            margin-bottom: 20px;
+            padding: 15px;
             background: rgba(255, 69, 0, 0.15);
             border-radius: 15px;
             border: 1px solid rgba(255, 69, 0, 0.3);
@@ -436,20 +467,19 @@
             <div class="logo">
                 <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjUwIiB2aWV3Qm94PSIwIDAgMTUwIDUwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjx0ZXh0IHg9IjUiIHk9IjM1IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMzAiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSIjRkY0NTAwIj50b2ZmYW5vPC90ZXh0Pjwvc3ZnPg==" alt="Toffano Logo" />
             </div>
+            <h1 class="header-title">Portal de Acesso Protheus</h1>
+            <div class="header-clock">
+                <div class="compact-clock">
+                    <div class="compact-time" id="compactTime">00:00:00</div>
+                    <div class="compact-date" id="compactDate">--/--/----</div>
+                </div>
+            </div>
         </div>
     </header>
 
     <div class="container">
         <div class="welcome-section">
-            <h1 class="welcome-title">Portal de Acesso Protheus</h1>
             <p class="welcome-subtitle">Escolha o ambiente e RPO para acessar o sistema</p>
-            <div class="digital-clock">
-                <div class="clock-section">
-                    <div class="clock-time" id="digitalTime">00:00:00</div>
-                    <div class="clock-date" id="digitalDate">--</div>
-                    <div class="clock-day" id="digitalDay">--</div>
-                </div>
-            </div>
         </div>
 
         <div class="section">
@@ -512,21 +542,21 @@
                 Outros Acessos
             </h2>
             <div class="other-buttons-grid">
-                <a href="#" class="other-btn" onclick="accessOther('RH Online')">
+                <a href="#" class="other-btn" onclick="accessOther('Portal RH')">
                     <i class="fas fa-users"></i>
-                    <span>RH Online</span>
+                    <span>Portal RH</span>
                 </a>
-                <a href="#" class="other-btn" onclick="accessOther('Reserva de Salas')">
+                <a href="#" class="other-btn" onclick="accessOther('Sala de Reunião')">
                     <i class="fas fa-chalkboard-user"></i>
-                    <span>Reserva de Salas</span>
+                    <span>Sala de Reunião</span>
                 </a>
                 <a href="#" class="other-btn" onclick="accessOther('Agenda')">
                     <i class="fas fa-calendar-days"></i>
                     <span>Agenda</span>
                 </a>
-                <a href="#" class="other-btn" onclick="accessOther('Whatsapp')">
-                    <i class="fab fa-whatsapp"></i>
-                    <span>Whatsapp</span>
+                <a href="#" class="other-btn" onclick="accessOther('GLPI')">
+                    <i class="fas fa-ticket"></i>
+                    <span>GLPI</span>
                 </a>
             </div>
         </div>
@@ -538,61 +568,62 @@
     </footer>
 
     <script>
-        // Atualizar relógio digital
-        function updateDigitalClock() {
+        // Atualizar relógio compacto
+        function updateCompactClock() {
             const now = new Date();
             
             // Horário
             const hours = String(now.getHours()).padStart(2, '0');
             const minutes = String(now.getMinutes()).padStart(2, '0');
             const seconds = String(now.getSeconds()).padStart(2, '0');
-            document.getElementById('digitalTime').textContent = `${hours}:${minutes}:${seconds}`;
+            document.getElementById('compactTime').textContent = `${hours}:${minutes}:${seconds}`;
             
             // Data
             const day = String(now.getDate()).padStart(2, '0');
             const month = String(now.getMonth() + 1).padStart(2, '0');
             const year = now.getFullYear();
-            document.getElementById('digitalDate').textContent = `${day}/${month}/${year}`;
-            
-            // Dia da semana
-            const weekdays = ['Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado'];
-            document.getElementById('digitalDay').textContent = weekdays[now.getDay()];
+            document.getElementById('compactDate').textContent = `${day}/${month}/${year}`;
         }
 
         // Função para acessar sistemas Protheus
         function accessSystem(environment, rpo) {
+            // Aqui você pode adicionar a lógica para redirecionar para os links corretos
+            alert(`Acessando ${environment} - ${rpo}\n\nEm breve você será redirecionado para o sistema.`);
+            
             // Exemplo de como implementar os links reais:
-            if (environment === 'Protheus 01' && rpo === 'Toffano1') {
-                window.open('https://192.168.1.199:1250/webapp/', '_blank');
-            }
-            else if (environment === 'Protheus 01' && rpo === 'Toffano2') {
-                window.open('https://192.168.1.199:1040/webapp/', '_blank');
-            }
-            else if (environment === 'Protheus 20' && rpo === 'Toffano1') {
-                window.open('https://192.168.1.214:1250/webapp/', '_blank');
-            }
-            else if (environment === 'Protheus 20' && rpo === 'Toffano2') {
-                window.open('https://192.168.1.199:1040/webapp/', '_blank');
-            }
+            // if (environment === 'Protheus 01' && rpo === 'Toffano1') {
+            //     window.open('http://seu-servidor:porta/protheus01/toffano1', '_blank');
+            // }
+            // else if (environment === 'Protheus 01' && rpo === 'Toffano2') {
+            //     window.open('http://seu-servidor:porta/protheus01/toffano2', '_blank');
+            // }
+            // else if (environment === 'Protheus 20' && rpo === 'Toffano1') {
+            //     window.open('http://seu-servidor:porta/protheus20/toffano1', '_blank');
+            // }
+            // else if (environment === 'Protheus 20' && rpo === 'Toffano2') {
+            //     window.open('http://seu-servidor:porta/protheus20/toffano2', '_blank');
+            // }
         }
 
         // Função para acessar outros sistemas
         function accessOther(system) {
+            alert(`Acessando ${system}\n\nEm breve você será redirecionado.`);
+            
             // Exemplo de implementação:
-            switch(system) {
-                case 'RH Online':
-                    window.open('http://192.168.1.197/terminal/', '_blank');
-                    break;
-                case 'Reserva de Salas':
-                    window.open('http://192.168.1.197/glpi/front/reservationitem.php', '_blank');
-                    break;
-                case 'Agenda':
-                    window.open('http://192.168.1.197/agenda/', '_blank');
-                    break;
-                case 'Whatsapp':
-                    window.open('https://web.whatsapp.com/', '_blank');
-                    break;
-            }
+            // switch(system) {
+            //     case 'Portal RH':
+            //         window.open('http://portal-rh.toffano.com.br', '_blank');
+            //         break;
+            //     case 'Sala de Reunião':
+            //         window.open('http://reuniao.toffano.com.br', '_blank');
+            //         break;
+            //     case 'Agenda':
+            //         window.open('http://agenda.toffano.com.br', '_blank');
+            //         break;
+            //     case 'GLPI':
+            //         window.open('http://glpi.toffano.com.br', '_blank');
+            //         break;
+            // }
         }
 
         // Criar partículas flutuantes
@@ -612,8 +643,8 @@
         }
 
         // Inicializar
-        updateDigitalClock();
-        setInterval(updateDigitalClock, 1000); // Atualizar a cada segundo
+        updateCompactClock();
+        setInterval(updateCompactClock, 1000); // Atualizar a cada segundo
         createParticles();
 
         // Efeito de carregamento suave
