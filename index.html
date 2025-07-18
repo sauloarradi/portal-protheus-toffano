@@ -512,11 +512,11 @@
                 Outros Acessos
             </h2>
             <div class="other-buttons-grid">
-                <a href="#" class="other-btn" onclick="accessOther('Portal RH')">
+                <a href="#" class="other-btn" onclick="accessOther('RH Online')">
                     <i class="fas fa-users"></i>
                     <span>RH Online</span>
                 </a>
-                <a href="#" class="other-btn" onclick="accessOther('Sala de Reunião')">
+                <a href="#" class="other-btn" onclick="accessOther('Reserva de Salas')">
                     <i class="fas fa-chalkboard-user"></i>
                     <span>Reserva de Salas</span>
                 </a>
@@ -525,7 +525,7 @@
                     <span>Agenda</span>
                 </a>
                 <a href="#" class="other-btn" onclick="accessOther('Whatsapp')">
-                    <i class="fas fa-ticket"></i>
+                    <i class="fab fa-whatsapp"></i>
                     <span>Whatsapp</span>
                 </a>
             </div>
@@ -561,9 +561,6 @@
 
         // Função para acessar sistemas Protheus
         function accessSystem(environment, rpo) {
-            // Aqui você pode adicionar a lógica para redirecionar para os links corretos
-            alert(`Acessando ${environment} - ${rpo}\n\nEm breve você será redirecionado para o sistema.`);
-            
             // Exemplo de como implementar os links reais:
             if (environment === 'Protheus 01' && rpo === 'Toffano1') {
                 window.open('https://192.168.1.199:1250/webapp/', '_blank');
@@ -581,8 +578,6 @@
 
         // Função para acessar outros sistemas
         function accessOther(system) {
-            alert(`Acessando ${system}\n\nEm breve você será redirecionado.`);
-            
             // Exemplo de implementação:
             switch(system) {
                 case 'RH Online':
