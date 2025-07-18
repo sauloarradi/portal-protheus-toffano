@@ -514,19 +514,19 @@
             <div class="other-buttons-grid">
                 <a href="#" class="other-btn" onclick="accessOther('Portal RH')">
                     <i class="fas fa-users"></i>
-                    <span>Portal RH</span>
+                    <span>RH Online</span>
                 </a>
                 <a href="#" class="other-btn" onclick="accessOther('Sala de Reunião')">
                     <i class="fas fa-chalkboard-user"></i>
-                    <span>Sala de Reunião</span>
+                    <span>Reserva de Salas</span>
                 </a>
                 <a href="#" class="other-btn" onclick="accessOther('Agenda')">
                     <i class="fas fa-calendar-days"></i>
                     <span>Agenda</span>
                 </a>
-                <a href="#" class="other-btn" onclick="accessOther('GLPI')">
+                <a href="#" class="other-btn" onclick="accessOther('Whatsapp')">
                     <i class="fas fa-ticket"></i>
-                    <span>GLPI</span>
+                    <span>Whatsapp</span>
                 </a>
             </div>
         </div>
@@ -565,18 +565,18 @@
             alert(`Acessando ${environment} - ${rpo}\n\nEm breve você será redirecionado para o sistema.`);
             
             // Exemplo de como implementar os links reais:
-            // if (environment === 'Protheus 01' && rpo === 'Toffano1') {
-            //     window.open('http://seu-servidor:porta/protheus01/toffano1', '_blank');
-            // }
-            // else if (environment === 'Protheus 01' && rpo === 'Toffano2') {
-            //     window.open('http://seu-servidor:porta/protheus01/toffano2', '_blank');
-            // }
-            // else if (environment === 'Protheus 20' && rpo === 'Toffano1') {
-            //     window.open('http://seu-servidor:porta/protheus20/toffano1', '_blank');
-            // }
-            // else if (environment === 'Protheus 20' && rpo === 'Toffano2') {
-            //     window.open('http://seu-servidor:porta/protheus20/toffano2', '_blank');
-            // }
+            if (environment === 'Protheus 01' && rpo === 'Toffano1') {
+                window.open('https://192.168.1.199:1250/webapp/', '_blank');
+            }
+            else if (environment === 'Protheus 01' && rpo === 'Toffano2') {
+                window.open('https://192.168.1.199:1040/webapp/', '_blank');
+            }
+            else if (environment === 'Protheus 20' && rpo === 'Toffano1') {
+                window.open('https://192.168.1.214:1250/webapp/', '_blank');
+            }
+            else if (environment === 'Protheus 20' && rpo === 'Toffano2') {
+                window.open('https://192.168.1.199:1040/webapp/', '_blank');
+            }
         }
 
         // Função para acessar outros sistemas
@@ -584,20 +584,20 @@
             alert(`Acessando ${system}\n\nEm breve você será redirecionado.`);
             
             // Exemplo de implementação:
-            // switch(system) {
-            //     case 'Portal RH':
-            //         window.open('http://portal-rh.toffano.com.br', '_blank');
-            //         break;
-            //     case 'Sala de Reunião':
-            //         window.open('http://reuniao.toffano.com.br', '_blank');
-            //         break;
-            //     case 'Agenda':
-            //         window.open('http://agenda.toffano.com.br', '_blank');
-            //         break;
-            //     case 'GLPI':
-            //         window.open('http://glpi.toffano.com.br', '_blank');
-            //         break;
-            // }
+            switch(system) {
+                case 'RH Online':
+                    window.open('http://192.168.1.197/terminal/', '_blank');
+                    break;
+                case 'Reserva de Salas':
+                    window.open('http://192.168.1.197/glpi/front/reservationitem.php', '_blank');
+                    break;
+                case 'Agenda':
+                    window.open('http://192.168.1.197/agenda/', '_blank');
+                    break;
+                case 'Whatsapp':
+                    window.open('https://web.whatsapp.com/', '_blank');
+                    break;
+            }
         }
 
         // Criar partículas flutuantes
