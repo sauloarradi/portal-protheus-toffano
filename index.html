@@ -99,16 +99,28 @@
             padding: 20px 40px;
         }
 
-        .welcome-section {
-            text-align: center;
-            margin-bottom: 25px;
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
         }
 
-        .welcome-subtitle {
-            font-size: 1.2rem;
-            color: rgba(255, 255, 255, 0.95);
-            margin-bottom: 10px;
-            font-weight: 300;
+        .protheus-section {
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 25px;
+            padding: 30px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .other-section {
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 25px;
+            padding: 30px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .current-time {
@@ -116,48 +128,6 @@
             color: rgba(255, 255, 255, 0.85);
             margin-bottom: 30px;
             font-weight: 300;
-        }
-
-        .digital-clock {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
-            margin: 20px 0;
-        }
-
-        .clock-section {
-            background: rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(10px);
-            padding: 15px 25px;
-            border-radius: 15px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .clock-time {
-            font-size: 2.5rem;
-            font-weight: 300;
-            color: #ffffff;
-            font-family: 'Courier New', monospace;
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-            letter-spacing: 2px;
-        }
-
-        .clock-date {
-            font-size: 1.2rem;
-            color: rgba(255, 255, 255, 0.9);
-            font-weight: 400;
-            text-align: center;
-            margin-top: 5px;
-        }
-
-        .clock-day {
-            font-size: 1rem;
-            color: rgba(255, 255, 255, 0.8);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            text-align: center;
         }
 
         .section {
@@ -168,18 +138,6 @@
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
             backdrop-filter: blur(15px);
             border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .section-title {
-            font-size: 1.8rem;
-            color: #2d3748;
-            margin-bottom: 25px;
-            text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-            font-weight: 300;
         }
 
         .section-title i {
@@ -316,8 +274,8 @@
 
         .other-buttons-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
             margin-top: 15px;
         }
 
@@ -395,11 +353,22 @@
             margin: 5px 0;
         }
 
-        /* Responsividade básica para mobile (mínima) */
+        /* Responsividade */
+        @media (max-width: 1200px) {
+            .main-content {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .other-buttons-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
         @media (max-width: 768px) {
             .environments-container {
                 grid-template-columns: 1fr;
-                gap: 30px;
+                gap: 20px;
             }
             
             .other-buttons-grid {
@@ -407,19 +376,21 @@
             }
             
             .container {
-                padding: 40px 20px;
+                padding: 20px 20px;
             }
             
-            .section, .other-section {
-                padding: 30px;
+            .protheus-section, .other-section {
+                padding: 20px;
             }
             
-            .welcome-title {
-                font-size: 2.5rem;
+            .header-content {
+                grid-template-columns: 1fr;
+                gap: 10px;
+                text-align: center;
             }
             
-            .logo {
-                font-size: 2.5rem;
+            .header-clock {
+                justify-content: center;
             }
         }
 
@@ -467,7 +438,10 @@
             <div class="logo">
                 <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjUwIiB2aWV3Qm94PSIwIDAgMTUwIDUwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjx0ZXh0IHg9IjUiIHk9IjM1IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMzAiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSIjRkY0NTAwIj50b2ZmYW5vPC90ZXh0Pjwvc3ZnPg==" alt="Toffano Logo" />
             </div>
-            <h1 class="header-title">Portal de Acesso Protheus</h1>
+            <div class="header-center">
+                <h1 class="header-title">Portal de Acesso Protheus</h1>
+                <p class="header-subtitle">Escolha o ambiente e RPO para acessar o sistema</p>
+            </div>
             <div class="header-clock">
                 <div class="compact-clock">
                     <div class="compact-time" id="compactTime">00:00:00</div>
@@ -478,16 +452,7 @@
     </header>
 
     <div class="container">
-        <div class="welcome-section">
-            <p class="welcome-subtitle">Escolha o ambiente e RPO para acessar o sistema</p>
-        </div>
-
         <div class="section">
-            <h2 class="section-title">
-                <i class="fas fa-server"></i>
-                Sistemas Protheus
-            </h2>
-            
             <div class="system-info">
                 <div>
                     <span class="status-indicator"></span>
@@ -542,21 +507,21 @@
                 Outros Acessos
             </h2>
             <div class="other-buttons-grid">
-                <a href="#" class="other-btn" onclick="accessOther('Portal RH')">
+                <a href="#" class="other-btn" onclick="accessOther('RH Online')">
                     <i class="fas fa-users"></i>
-                    <span>Portal RH</span>
+                    <span>RH Online</span>
                 </a>
-                <a href="#" class="other-btn" onclick="accessOther('Sala de Reunião')">
+                <a href="#" class="other-btn" onclick="accessOther('Reserva de Salas')">
                     <i class="fas fa-chalkboard-user"></i>
-                    <span>Sala de Reunião</span>
+                    <span>Reserva de Salas</span>
                 </a>
                 <a href="#" class="other-btn" onclick="accessOther('Agenda')">
                     <i class="fas fa-calendar-days"></i>
                     <span>Agenda</span>
                 </a>
-                <a href="#" class="other-btn" onclick="accessOther('GLPI')">
-                    <i class="fas fa-ticket"></i>
-                    <span>GLPI</span>
+                <a href="#" class="other-btn" onclick="accessOther('Whatsapp')">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>Whatsapp</span>
                 </a>
             </div>
         </div>
@@ -587,43 +552,37 @@
 
         // Função para acessar sistemas Protheus
         function accessSystem(environment, rpo) {
-            // Aqui você pode adicionar a lógica para redirecionar para os links corretos
-            alert(`Acessando ${environment} - ${rpo}\n\nEm breve você será redirecionado para o sistema.`);
-            
             // Exemplo de como implementar os links reais:
-            // if (environment === 'Protheus 01' && rpo === 'Toffano1') {
-            //     window.open('http://seu-servidor:porta/protheus01/toffano1', '_blank');
-            // }
-            // else if (environment === 'Protheus 01' && rpo === 'Toffano2') {
-            //     window.open('http://seu-servidor:porta/protheus01/toffano2', '_blank');
-            // }
-            // else if (environment === 'Protheus 20' && rpo === 'Toffano1') {
-            //     window.open('http://seu-servidor:porta/protheus20/toffano1', '_blank');
-            // }
-            // else if (environment === 'Protheus 20' && rpo === 'Toffano2') {
-            //     window.open('http://seu-servidor:porta/protheus20/toffano2', '_blank');
-            // }
+            if (environment === 'Protheus 01' && rpo === 'Toffano1') {
+                window.open('https://192.168.1.199:1250/webapp/', '_blank');
+            }
+            else if (environment === 'Protheus 01' && rpo === 'Toffano2') {
+                window.open('https://192.168.1.199:1040/webapp/', '_blank');
+            }
+            else if (environment === 'Protheus 20' && rpo === 'Toffano1') {
+                window.open('https://192.168.1.214:1250/webapp/', '_blank');
+            }
+            else if (environment === 'Protheus 20' && rpo === 'Toffano2') {
+                window.open('https://192.168.1.199:1040/webapp/', '_blank');
+            }
         }
 
         // Função para acessar outros sistemas
         function accessOther(system) {
-            alert(`Acessando ${system}\n\nEm breve você será redirecionado.`);
-            
-            // Exemplo de implementação:
-            // switch(system) {
-            //     case 'Portal RH':
-            //         window.open('http://portal-rh.toffano.com.br', '_blank');
-            //         break;
-            //     case 'Sala de Reunião':
-            //         window.open('http://reuniao.toffano.com.br', '_blank');
-            //         break;
-            //     case 'Agenda':
-            //         window.open('http://agenda.toffano.com.br', '_blank');
-            //         break;
-            //     case 'GLPI':
-            //         window.open('http://glpi.toffano.com.br', '_blank');
-            //         break;
-            // }
+            switch(system) {
+                case 'RH Online':
+                    window.open('http://192.168.1.197/terminal/', '_blank');
+                    break;
+                case 'Reserva de Salas':
+                    window.open('http://192.168.1.197/glpi/front/reservationitem.php', '_blank');
+                    break;
+                case 'Agenda':
+                    window.open('http://192.168.1.197/agenda/', '_blank');
+                    break;
+                case 'Whatsapp':
+                    window.open('https://web.whatsapp.com/', '_blank');
+                    break;
+            }
         }
 
         // Criar partículas flutuantes
